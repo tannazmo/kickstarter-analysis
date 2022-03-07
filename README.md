@@ -10,11 +10,11 @@ From the raw data set, we first looked at the Goal and Pledged dollar amount for
 
  =ROUND(pledged/goal*100,0)
 
-Also looked at the average donation for each campaign, to do so the whole pledged amount for each campaign was divided by the number of backers for that campaign
+Also looked at the average donation for each campaign, to do so the whole pledged amount for each campaign was divided by the number of backers for that campaign.
 
-Then, since in our data set the Category and Subcategory were shown together, to be able to focus on the related industry, Category and Subcategory were separated into two columns by using the Text to Columns feature then filtered out all unrelated campaigns to only look at what Theatre and Play subcategories were doing in their crowdfunding campaign. 
+One of the **challenges** we encountered was that since in our data set the Category and Subcategory were shown together, to be able to focus on the related industry, Category and Subcategory were separated into two columns by using the Text to Columns feature then filtered out all unrelated campaigns to only look at what Theatre and Play subcategories were doing in their crowdfunding campaign. 
 
-We also wanted to know how long these campaigns were running to reach their goals. So, we looked at the Date Created and Date Ended for each campaign. Here the challenge we faced was that the dates were shown in a different format (Unix), so they were incomprehensible, so we had to convert the dates. We overcame this task by using the formula:
+We also wanted to know how long these campaigns were running to reach their goals. So, we looked at the Date Created and Date Ended for each campaign. Here the **challenge** we faced was that the dates were shown in a different format (Unix), so they were incomprehensible, so we had to convert the dates. We overcame this task by using the formula:
 
 =([Date shown in the field]/60/60/24)+DATE(1970,1,1)
 
@@ -49,7 +49,7 @@ By looking at the Theater Outcomes by Launch Date charts we have created, we cou
 ### What can you conclude about the Outcomes based on Goals?
 By looking at the Outcomes Based on Goals chart, we can say that:
 
-1) for campaigns with goals under $30K, the number of successful campaigns decline as the goal increases. 
+1) For campaigns with goals under $30K, the number of successful campaigns decline as the goal increases. 
 
 2) Campaigns with goals in the range of 5K-10K have a similar chance of succeeding, to campaigns with goals in the range of 10K-15K. And since Louise's goal was about 10K, she would not decrease or increase her chances of running a successful campaign by changing her goal by about 5K, so there is no point in lowering her goal, also it wouldn't hurt much if she decided to increase her goal a by that margin.
 
@@ -63,20 +63,5 @@ We could filter the dataset by the country and create a table and chart.
 We could also look at how long the successful campaigns were based on their goal.
 
 
-
-
-
-## Outcome Based on Launch Date
-We can see the trend of failed, canceled, live and successful campaigns based on the month they were launched.
-![Outcomes_Based_on_Launch_Date](/Outcomes_Based_on_Launch_Date.png "Outcome based on launch date")
-
----
-
-## Parent Category Outcomes
-Here is the chart showing the number of campaigns in each category.
-
-![Parent_Category_Outcomes](/Parent_Category_Outcomes.png "Parent category outcome")
-
----
-
-To create more views, you also have access to the main data Excel file by clicking [here](/data-1-1-3-StarterBook.xlxs "download the EXCEL file").
+### Dataset used:
+To create more views, you also have access to the main data Excel file by clicking [here](/Kickstarter_Challenge.xlsx "download the EXCEL file").
