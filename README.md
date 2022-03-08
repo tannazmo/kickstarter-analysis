@@ -12,13 +12,17 @@ From the raw data set, we first looked at the Goal and Pledged dollar amount for
 
 Also looked at the average donation for each campaign, to do so the whole pledged amount for each campaign was divided by the number of backers for that campaign.
 
-One of the **challenges** we encountered was that since in our data set the Category and Subcategory were shown together, to be able to focus on the related industry, Category and Subcategory were separated into two columns by using the Text to Columns feature then filtered out all unrelated campaigns to only look at what Theatre and Play subcategories were doing in their crowdfunding campaign. 
+=Pledged/Backers
 
-We also wanted to know how long these campaigns were running to reach their goals. So, we looked at the Date Created and Date Ended for each campaign. Here the **challenge** we faced was that the dates were shown in a different format (Unix), so they were incomprehensible, so we had to convert the dates. We overcame this task by using the formula:
+One of the **challenges** we encountered was that since in our data set the Category and Subcategory were shown together. So, to be able to focus on the related industry and its subcategories, Category and Subcategory were separated into two columns by using the *Text to Columns* feature, then filtered out all unrelated campaigns to only look at what Theatre and Play subcategories were doing in their crowdfunding campaign. 
+
+We also wanted to know for how long these campaigns were running to reach their goals. So, we looked at the 'Date Created' and 'Date Ended' for each campaign. Here the **challenge** we faced was that the dates were shown in a different format (Unix format), therefore they were incomprehensible, so we had to convert the dates. We overcame this challenge by using the formula:
 
 =([Date shown in the field]/60/60/24)+DATE(1970,1,1)
 
 Date (in seconds) divided by 60 to get the number of minutes, divided by 60 again to get the number of hours and then divided by 24 to get the number of days, we then added the beginning point for the UNIX date showing system which is 1970/1/1
+
+### Data Visualization
 
 Now that we have a data set that we can turn into tables and charts with meaningful and useful information, we used Pivot Tables and Charts.
 
