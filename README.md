@@ -6,14 +6,18 @@ Louise, a playwright, would like to start a crowdfunding campaign to fund her pl
 So, we will be performing analysis on Kickstarter data to uncover trends by extracting useful data from the raw dataset for helping Louise making an informed decision on how to run her fundraising campaign to increase the likelihood of being successfully funded and setting her up for success by helping her see what other crowdfunding campaigns have done, that might have been a factor in their project having succeeded or failed.
 
 ## Analysis and Challenges
+### Getting the raw dataset ready
+#### Step 1
 From the raw data set, we first looked at the Goal and Pledged dollar amount for all campaigns to see what percentage of the goal amount was raised for each campaign. we did that by dividing the pledged amount by the goal amount (PLEDGED/GOAL)% to show it better we also rounded the results to whole numbers.
 
  =ROUND(pledged/goal*100,0)
 
+#### Step 2
 Also looked at the average donation for each campaign, to do so the whole pledged amount for each campaign was divided by the number of backers for that campaign.
 
 =Pledged/Backers
 
+#### Challenges
 One of the **challenges** we encountered was that since in our data set the Category and Subcategory were shown together. So, to be able to focus on the related industry and its subcategories, Category and Subcategory were separated into two columns by using the *Text to Columns* feature, then filtered out all unrelated campaigns to only look at what Theatre and Play subcategories were doing in their crowdfunding campaign. 
 
 We also wanted to know for how long these campaigns were running to reach their goals. So, we looked at the 'Date Created' and 'Date Ended' for each campaign. Here the **challenge** we faced was that the dates were shown in a different format (Unix format), therefore they were incomprehensible, so we had to convert the dates. We overcame this challenge by using the formula:
@@ -26,11 +30,14 @@ Date (in seconds) divided by 60 to get the number of minutes, divided by 60 agai
 
 Now that we have a data set that we can turn into tables and charts with meaningful and useful information, we used Pivot Tables and Charts.
 
+#### *Theatre outcomes based on their launch date*
 For this we thought it would be useful for Louise to know if time of year, e.g., month could be factor in the outcome of the challenge. 
 So, we created a table and chart showing the outcomes of the Theatres based on their launch date, more specifically, the month they launched.
 
 ![Theatre_Outcomes_vs_Launch](/resources/Theatre_Outcomes_vs_Launch.png "Theatre Outcomes Based on Launch Date")
- 
+
+
+#### *Outcomes based on their goals*
 Another analysis we thought is useful is looking at the goal amount to determine if what campaigns were more successful or had failed considering their goal amounts.
 So, we created a table and chart showing the outcomes based on the goal's dollar amount. to better show this, since the goals could vary by a little or a lot, we used the ranges of goals, e.g., less than $1000, between $1000 and $5000, etc., to see what percentage of the campaigns have succeeded or failed or cancelled.  
 
@@ -39,8 +46,7 @@ So, we created a table and chart showing the outcomes based on the goal's dollar
 
 ## Results
 
-### What are two conclusions you can draw about the Theater Outcomes by Launch Date?
-
+### Conclusions about the Theater Outcomes by Launch Date
 
 By looking at the Theater Outcomes by Launch Date charts we have created, we could show that:
 
@@ -50,7 +56,8 @@ By looking at the Theater Outcomes by Launch Date charts we have created, we cou
 
 3) In October there was a jump in the number of failed campaigns.
 
-### What can you conclude about the Outcomes based on Goals?
+### Conslusions about the Outcomes based on Goals
+
 By looking at the Outcomes Based on Goals chart, we can say that:
 
 1) For campaigns with goals under $30K, the number of successful campaigns decline as the goal increases. 
@@ -64,8 +71,8 @@ Also, if there was another level of subcategories for the genre of the plays, sh
 ### What are some other possible tables and/or graphs that we could create?
 
 We could filter the dataset by the country and create a table and chart.
-We could also look at how long the successful campaigns were based on their goal.
+We could also look at how long the successful campaigns were, based on their goal.
 
 
-### Dataset used:
+## Dataset used:
 To create more views, you also have access to the main data Excel file by clicking [here](/Kickstarter_Challenge.xlsx "download the EXCEL file").
